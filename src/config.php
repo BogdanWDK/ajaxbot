@@ -28,8 +28,8 @@ $privfnc = array("#sh"=>"sh",
 # Configure chat user and pass
 
 
-$user = "leet";
-$pass = "dummypass";
+$user = "advbot";
+$pass = "advbotajax";
 
 
 $userspm = array();

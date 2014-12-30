@@ -90,10 +90,10 @@ function help($cli, $user)
 
 	switch($option) {
 		case "bot":
-			$output = file_get_contents("botinfo.txt", true);
+			$output = file_get_contents("files/botinfo.txt", true);
 		break;
 		case "commands":
-			$output = file_get_contents("botcommands.txt", true);
+			$output = file_get_contents("files/botcommands.txt", true);
 		break;
 	}
 	return " \n$output";
@@ -122,22 +122,11 @@ function weather($oras) {
 
 function isup($url,$user) {
 
-/*
-    $process = urlencode($url);
-    $url = "http://isup.me/" . $process;
-    $html = file_get_contents($url);
-        $status = get_string_between($html, "</span>", "<p>");
-
-	return("Domain " . $process . " | Info: " . $status);
-
-*/
-
-
 
     if ((preg_match("/^([a-z\d](-*[a-z\d])*)(\.([a-z\d](-*[a-z\d])*))*$/i", $url) && preg_match("/^.{1,253}$/", $url) && preg_match("/^[^\.]{1,63}(\.[^\.]{1,63})*$/", $url))) {
-        return ("/msg $user Domeniu: " . urlencode($url) . " | Status: " .shell_exec("python isup.py $url"));
+        return ("Domeniu: " . urlencode($url) . " | Status: " .shell_exec("python files/isup.py $url"));
     } else {
-        return ("/msg $user Te rog introdu un domeniu valid.");
+        return ("Te rog introdu un domeniu valid.(Exemplu #isup google.ro)");
     }
 
 }
@@ -147,7 +136,7 @@ function isup($url,$user) {
 
 
 function b64_function($cli,$user) {
- 
+
 	$cli = explode(" ",$cli,2);
 	$option = $cli[0];
 	$string = $cli[1];
@@ -296,12 +285,12 @@ function killsw()
 function stringtolower($string,$user) {
 
 
-        return ("/msg $user String : " . strtolower($string));
+        return ("String : " . strtolower($string));
 }
 
 function stringtoupper($string,$user) {
 
-        return ("/msg $user String : " . strtoupper($string));
+        return ("String : " . strtoupper($string));
 }
 
 

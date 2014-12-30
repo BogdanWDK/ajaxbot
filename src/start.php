@@ -1,8 +1,8 @@
 <?php
-include("functions.php");
-include("chat.inc.php");
-include("custom.php");
-include("config.php");
+include("functions.php" );
+include("chat.inc.php" );
+include("custom.php" );
+include("config.php" );
 
 login($user, $pass);
 
