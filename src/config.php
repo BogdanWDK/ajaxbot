@@ -1,5 +1,5 @@
 <?php
-$admin = array("em","shaggi","STiL");
+$admin = array("STiL");
 
 $pubfnc = array("#whois" => "whois",
 				"#ping"=>"ping", 
@@ -13,7 +13,9 @@ $pubfnc = array("#whois" => "whois",
 				"#banlist" =>"list_banned", 
 				"#pm"=>"pm",
 				"#weather"=>"weather",
-				"#isup"=>"isup");
+				"#isup"=>"isup",
+				"#tolower"=>"stringtolower",
+				"#toupper"=>"stringtoupper");
 				
 $chatevents = array("/login"=>"Clogin",
 				"/privmsg"=>"privmsg");

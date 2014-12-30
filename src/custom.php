@@ -293,5 +293,19 @@ function killsw()
 }
 
 
+function stringtolower($string,$user) {
+
+
+        return ("/msg $user String : " . strtolower($string));
+}
+
+function stringtoupper($string,$user) {
+
+        return ("/msg $user String : " . strtoupper($string));
+}
+
+
+
+
 
 ?>
